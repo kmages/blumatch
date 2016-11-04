@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>BluMatch - Get Started</title>
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="get-start-page">
+
+
+<div id="c-mask" class="c-mask"></div>
+ <div class="wrapper">
+ <div class="container">
+ <div class="row get-start-main">
+  <div class="col-lg-7 col-md-6 col-sm-12">
+   <img src="images/background-2.png" alt="Profiles">
+ </div>  
+ <div class="col-lg-5 col-md-6 col-sm-12">
+  <div class="profile-right">
+   <form id="bio-form" class="form1">
+    <span>Tell us a few things about you:</span>
+	<label>I am a <select>
+	<option>Man</option>
+	<option>Woman</option>
+	</select>
+	</label>
+	<label>Looking for a <select>
+	 <option>Woman</option>
+	 <option>Man</option>
+	</select>
+	</label> 
+	 <label class="radio-selection"><input type="radio" value="" name="social1" ><span></span>Scan my Facebook feed </label>
+	 <label class="radio-selection"><input type="radio" value="" name="social1" ><span></span>Scan my Gmail feed </label>
+	 <label class="radio-selection"><input type="radio" value="" name="social1" ><span></span>Scan my Twitter handle: <input type="text" value="" class="input-twitterinput-twitter"> </label>
+	 <label class="radio-selection"><input type="radio" value="" name="social1" id="bio" ><span></span>I’ll enter a short bio of myself (200 words minimum) <textarea class="soical1-text"></textarea></label>
+	 <button type="button" value="" class="find-btn">Find My Match</button>
+	 <input type="button" class="btn clear1" value="Clear" id="clear-form">
+	</form>
+	<form class="form2" action="profile-page.html">
+	<span>Tell us a few things about you:</span><a class="back" href="javascript:;"><img src="images/back.png"></a>
+     <input type="email" value="" class="form-control" placeholder="Email">
+	 <input type="password" value="" class="form-control" placeholder="Password">
+	 <input type="text" value="" class="form-control" placeholder="Cell Number">
+	 <input type="text" value="" class="form-control" placeholder="Date of Birth">
+	 <input type="text" value="" class="form-control" placeholder="Zip Code"> 
+	  <input type="submit" value="Submit" class="find-btn"> 
+	</form>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ 
+ 
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+
+<script>
+  $(document).ready(function(){
+	$('input[type="radio"]').click(function(){
+	$('input[type="radio"]').removeClass('on');
+		if($(this).is(':checked') == true){
+			$(this).addClass('on');
+			$('.soical1-text').hide();
+		}
+	});
+	$('body').on('click','#bio',function(){
+	$('.soical1-text').show();
+	});
+	
+	$('body').on('click','#clear-form',function(){
+		$('#bio-form')[0].reset();
+	});
+	
+  });
+</script>
+<script>
+$(document).ready(function(){
+$('.form2').hide(); 
+ $('.find-btn').click(function(){
+  $('.form2').show(); 
+  setTimeout(function(){
+  $('.form2').addClass('form2-active'); 
+}, 10);
+ });
+ $('.back').click(function(){
+ $('.form2').removeClass('form2-active');
+  setTimeout(function(){
+   $('.form2').hide(); 
+}, 800);
+  
+ });
+});
+</script>
+</body>
+</html>
+  
+

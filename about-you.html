@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>BluMatch - About You</title>
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+<link href="css/font-awesome.css" rel="stylesheet">
+</head>
+
+<body>
+ <div class="wrapper">
+  <header>
+ <div class="container">
+   <div class="col-lg-3 col-md-3 col-sm-4 logo">
+    <a href="home.html"><img src="images/logo.png" alt="LOGO"></a>
+  </div>
+  <div class="col-lg-9 col-md-9 col-sm-8 navigation">
+    <nav class="navbar navbar-inverse">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+         <ul class="nav navbar-nav">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="snack.html">Snacks</a></li>
+          <li><a href="sugar-candy.html">Sugar Candy</a></li>
+          <li><a href="oysters.html">Oysters</a></li>
+		  <li><a href="buffet.html">Buffet</a></li>
+		  <li><a class="login1" href="login.html">Login</a></li>
+         </ul>
+       </div>       
+    </nav>
+   </div>
+  </div>
+</header>
+  
+<section class="main-inner">
+ <div class="top-banner">
+  <img src="images/inner-bg.jpg" alt="Sugar Candy Banner">
+  <span>Search Result</span>
+ </div>
+  <div class="container">
+   <div class="search-main1">
+    <div class="col-md-8 col-sm-8">
+	 <div class="about-row">
+      <span>What's your hair color?</span>
+	  <div class="about-row1">
+      <label class="radio-selection"><input value="" name="social1" type="radio"><span></span>No Answer</label>
+	  <label class="radio-selection"><input value="" name="social1" type="radio"><span></span>Auburn/Red</label>
+	  <label class="radio-selection"><input value="" name="social1" type="radio"><span></span>Dark Brown</label>
+	  <label class="radio-selection"><input value="" name="social1" type="radio"><span></span>Black</label>
+	  <label class="radio-selection"><input value="" name="social1" type="radio"><span></span>Blonde</label>
+	  <label class="radio-selection"><input value="" name="social1" type="radio"><span></span>Light Brown</label>
+	  <label class="radio-selection"><input value="" name="social1" type="radio"><span></span>Salt and Pepper</label>
+	   <div class="row">
+	    <input class="answer1" type="submit" value="Answer">
+	    <a class="answer1 more" href="javascript:;" class="more">Skip</a>
+		</div>
+	  </div>
+     </div>
+	 
+	 <div class="about-row about-row11">
+      <span>What's your hair color?</span>
+	  <div class="about-row1">
+      <label class="radio-selection"><input value="" name="social1" type="radio"><span></span>No Answer</label>
+	  <label class="radio-selection"><input value="" name="social1" type="radio"><span></span>Auburn/Red</label>
+	  <label class="radio-selection"><input value="" name="social1" type="radio"><span></span>Dark Brown</label>
+	  <label class="radio-selection"><input value="" name="social1" type="radio"><span></span>Black</label>
+	  <label class="radio-selection"><input value="" name="social1" type="radio"><span></span>Blonde</label>
+	  <label class="radio-selection"><input value="" name="social1" type="radio"><span></span>Light Brown</label>
+	  <label class="radio-selection"><input value="" name="social1" type="radio"><span></span>Salt and Pepper</label>
+	   <div class="row">
+	    <input type="submit" value="Answer">
+	    <a href="javascript:;" class="more">Skip</a>
+		</div>
+	  </div>
+     </div>
+	
+	</div> 
+    
+	<div class="col-md-4 col-sm-4">
+	 <div class="right-profile right-profile1">
+	  <span>83.3%</span>
+	  <p class="perctnge">Highest Match Possibale</span>
+	  <p>You have answered 6 questions. </p>
+	  <a href="#" class="answer-question">Clear all Answers</a>
+	 </div>
+    </div>
+   
+</section>
+		 
+ <footer>
+    <div class="container">
+      <ul class="btm_links">
+        <li ><a href="terms&conditions.html">Terms and Conditions</a></li>
+        <li ><a href="privacy.html">Privacy</a></li>
+      </ul>
+	<p>© Copyright 2016 BluMatch </p>
+     <ul>
+        <span>Find Us:</span>
+         <li><a href="javascript:;"><img src="images/fb.png"></a></li>
+         <li><a href="javascript:;"><img src="images/twitter.png"></a></li>
+     </ul>
+    </div>
+</footer>
+ 
+</div>  
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+   $(document).ready(function(){
+	$('input[type="radio"]').click(function(){
+	$('input[type="radio"]').removeClass('on');
+		if($(this).is(':checked') == true){
+			$(this).addClass('on');
+			$('.soical1-text').hide();
+		}
+	});
+	});
+</script>
+<script>
+ $(document).ready(function(){
+  $('.about-row11').hide(); 
+   $('.answer1').click(function(){
+    $('.about-row11').show(); 
+    setTimeout(function(){
+  $('.about-row11').addClass('about-row2'); 
+}, 10);
+ });
+}); 
+</script>
+</body>
+</html>
+  
+
