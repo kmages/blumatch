@@ -9,6 +9,7 @@
 <title>BluMatch - Get Started</title>
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
+<link href="css/font-awesome.css" rel="stylesheet">
 </head>
 
 <body class="get-start-page">
@@ -25,16 +26,29 @@
   <div class="profile-right">
    <form id="bio-form" class="form1">
     <span>Tell us a few things about you:</span>
-	<label>I am a <select>
-	<option>Man</option>
-	<option>Woman</option>
+	<label>I am a <select id="looking">
+			<option value="straight">Straight</option>
+			<option value="gay">Gay</option>
+			<option value="bisexual">Bisexual</option>
+			<option value="other">Other…</option>
 	</select>
 	</label>
 	<label>Looking for a <select>
-	 <option>Woman</option>
 	 <option>Man</option>
+	 <option>Transgender (Male)</option>
+	 <option>Transgender (Female)</option>
+	 <option class="orientation3">Hermaphrodite</option>  
 	</select>
 	</label> 
+	<div class="popup1">
+	 <div class="popup-text1">
+	  <label class="checkbox-selection"> 
+         I don't want to see or be seen by straight people.
+		 <input value="" name="social1" type="checkbox">
+         <span></span>
+      </label>
+	 </div>
+  </div>
 	 <label class="radio-selection"><input type="radio" value="" name="social1" ><span></span>Scan my Facebook feed </label>
 	 <label class="radio-selection"><input type="radio" value="" name="social1" ><span></span>Scan my Gmail feed </label>
 	 <label class="radio-selection"><input type="radio" value="" name="social1" ><span></span>Scan my Twitter handle: <input type="text" value="" class="input-twitterinput-twitter"> </label>
@@ -51,11 +65,68 @@
 	 <input type="text" value="" class="form-control" placeholder="Zip Code"> 
 	  <input type="submit" value="Submit" class="find-btn"> 
 	</form>
+	
  </div>
  </div>
  </div>
+  
  </div>
- </div>
+  <div class="orientation1-main">
+   <div class="orientation1-main-content">
+     <h5>Orientation <p>Select up to 5</p></h5> 
+	 <h6 class="orientation1-main-close"><i class='fa fa-close CloseTag'></i></h6>
+    <div class="show-selected-item">
+	</div>
+	<span a="Straight" id="Straight" class="span-item">Straight</span>
+	<span a="Gay" id="Gay" class="span-item">Gay</span>
+	<span a="Bisexual"  id="Bisexual" class="span-item">Bisexual</span>
+	<span a="Asexual" id="Asexual" class="span-item">Asexual</span>
+	<span a="Demisexual" id="Demisexual" class="span-item">Demisexual</span>
+	<span a="Heteroflexible" id="Heteroflexible" class="span-item">Heteroflexible</span>
+	<span a="Homoflexible" id="Homoflexible"  class="span-item">Homoflexible</span>
+	<span a="Bisexual" id="Bisexual"  class="span-item">Bisexual</span>
+	<span a="Lesbian" id="Lesbian"  class="span-item">Lesbian</span>
+	<span a="Pansexual" id="Pansexual"  class="span-item">Pansexual</span>
+	<span a="Queer" id="Queer"  class="span-item">Queer</span>
+	<span a="Questioning" id="Questioning"  class="span-item">Questioning</span>
+	<span a="Sapiosexual" id="Sapiosexual"  class="span-item">Sapiosexual</span>
+	<div class="row"><input type="submit" value="Continue" class="continue-button">
+     <input type="submit" value="Cancel" class="cancel-button">	</div> 
+   </div>
+  </div> 
+  <div class="orientation2-main">
+   <div class="orientation1-main-content">
+     <h5>Orientation <p>Select up to 5</p></h5> 
+	 <h6 class="orientation2-main-close"><i class='fa fa-close CloseTag1'></i></h6>
+    <div class="show-selected-item1">
+	</div>
+	<span a="Straight" id="Straight" class="span-item2">Straight</span>
+	<span a="Gay" id="Gay" class="span-item2">Gay</span>
+	<span a="Bisexual"  id="Bisexual" class="span-item2">Bisexual</span>
+	<span a="Asexual" id="Asexual" class="span-item2">Asexual</span>
+	<span a="Demisexual" id="Demisexual" class="span-item2">Demisexual</span>
+	<span a="Heteroflexible" id="Heteroflexible" class="span-item2">Heteroflexible</span>
+	<span a="Homoflexible" id="Homoflexible"  class="span-item2">Homoflexible</span>
+	<span a="Bisexual" id="Bisexual"  class="span-item2">Bisexual</span>
+	<span a="Lesbian" id="Lesbian"  class="span-item2">Lesbian</span>
+	<span a="Pansexual" id="Pansexual"  class="span-item2">Pansexual</span>
+	<span a="Queer" id="Queer"  class="span-item2">Queer</span>
+	<span a="Questioning" id="Questioning"  class="span-item2">Questioning</span>
+	<span a="Sapiosexual" id="Sapiosexual"  class="span-item2">Sapiosexual</span>
+	<div class="intersted-div">
+	<h5>I am Interested in<p>Pick One</p></h5>
+	<div class="row">
+	 <span class="span-item3">Men</span>
+	 <span class="span-item3">Women</span>
+	 <span class="span-item3">Everyone</span>
+	 </div>
+	</div>
+	<div class="row"><input type="submit" value="Continue" class="continue-button">
+     <input type="submit" value="Cancel" class="cancel-button1">	</div> 
+   </div>
+  </div> 
+ 
+  </div>
  
  
 <script src="js/jquery.js"></script>
@@ -97,6 +168,73 @@ $('.form2').hide();
   
  });
 });
+</script>
+<script>
+ $('document').ready(function(){
+ $('.orientation3').click(function(){
+   $('.orientation2-main').addClass('active');  
+  });
+  $('.orientation2-main-close').click(function(){
+   $('.orientation2-main').removeClass('active');   
+  });
+  $('.cancel-button1').click(function(){
+   $('.orientation2-main').removeClass('active');   
+  });
+  
+  $('.span-item2').click(function(){
+  var value = $(this).attr('a'); 
+   $('.show-selected-item1').append("<span class='span-item11'>" + value + "<i class='fa fa-close CloseTag1'></i></span>"); 
+   $(this).addClass('active');
+ });
+ $('body').on('click','.CloseTag1', function(){
+ $(this).parent().remove();
+ $('#'+$(this).parent().text()).removeClass('active');
+ 
+ });
+  
+  
+ 
+ // $('.orientation1').click(function(){
+   //$('.orientation1-main').addClass('active');  
+  //});
+  $('.orientation1-main-close').click(function(){
+   $('.orientation1-main').removeClass('active');  
+  });
+  $('.cancel-button').click(function(){
+   $('.orientation1-main').removeClass('active');  
+  });
+  
+  $('.span-item').click(function(){
+  var value = $(this).attr('a'); 
+   $('.show-selected-item').append("<span class='span-item1'>" + value + "<i class='fa fa-close CloseTag'></i></span>"); 
+   $(this).addClass('active');
+ });
+ $('body').on('click','.CloseTag', function(){
+ $(this).parent().remove();
+ $('#'+$(this).parent().text()).removeClass('active'); 
+ 
+ }); 
+
+ $('body').on('change','#looking',function(){
+ var val = $('#looking option:selected').val();
+ console.log(val);
+ if(val != 'straight'){
+   $('.popup1').show(); 
+   if(val == 'other'){
+ $('.orientation1-main').addClass('active');  
+ }
+ }
+ else{
+   $('.popup1').hide(); 
+ }
+ });
+ 
+ 
+ 
+//$('.orientation12').click(function(){
+  // $('.popup1').addClass('active');  
+  //}); 
+ });
 </script>
 </body>
 </html>
